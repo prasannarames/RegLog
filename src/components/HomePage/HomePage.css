@@ -1,0 +1,10 @@
+.home {
+  height: 300px;
+  width: 300px;
+  margin: 0 auto;
+}
+
+th,
+td {
+  padding: 20px;
+}
