@@ -19,7 +19,11 @@ export default function Register() {
     setUserName("");
     setPassword("");
     setConfirmPassword("");
-    navigate("/login");
+    if (!email || !userName || !password || !confirmPassword) {
+      alert("please fill all fields");
+    } else {
+      navigate("/login");
+    }
   };
   return (
     <div>

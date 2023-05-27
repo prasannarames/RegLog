@@ -15,6 +15,7 @@
 
 - vite
 - reactjs
+- react-router
 - react-redux
 - redux-toolkit
 - css
