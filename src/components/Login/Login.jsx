@@ -25,11 +25,11 @@ export default function Login() {
         alert("sucessfully Logged in");
       } else {
         alert("Invalid credentials");
-        navigate("/login");
+        navigate("/");
       }
     } catch (err) {
-      if (err.status == 404) {
-        navigate("/login");
+      if (err == 404) {
+        navigate("/");
       }
     }
   };
