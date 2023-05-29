@@ -25,7 +25,7 @@ export default function Login() {
         alert("sucessfully Logged in");
       } else {
         alert("Invalid credentials");
-        navigate("/");
+        navigate("/register");
       }
     } catch (err) {
       if (err == 404) {
