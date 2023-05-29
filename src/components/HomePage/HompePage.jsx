@@ -25,7 +25,7 @@ export default function HomePage() {
         </table>
       ) : (
         <h2>
-          You are not a registered user, please register and login first !!{" "}
+          You are not a registered user, please register and login first !!
         </h2>
       )}
     </div>
