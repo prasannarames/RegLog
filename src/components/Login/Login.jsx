@@ -25,7 +25,7 @@ export default function Login() {
         alert("sucessfully Logged in");
       } else {
         alert("Invalid credentials");
-        navigate("/register");
+        navigate("/login");
       }
     } catch (err) {
       if (err == 404) {
@@ -42,12 +42,14 @@ export default function Login() {
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          required
         />
         <input
           type="password"
           placeholder="enter password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          required
         />
         <button onClick={handleLogin}>LOGIN</button>
       </form>
