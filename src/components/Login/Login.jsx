@@ -12,6 +12,8 @@ export default function Login() {
   const userData = useSelector((state) => state.user.userData);
 
   const handleLogin = () => {
+    setEmail("");
+    setPassword("");
     if (
       userData &&
       userData.email === email &&
@@ -24,9 +26,6 @@ export default function Login() {
       alert("Invalid credentials");
       navigate("/login");
     }
-
-    setEmail("");
-    setPassword("");
   };
   return (
     <div>
