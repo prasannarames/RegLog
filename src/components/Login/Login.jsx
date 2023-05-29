@@ -14,7 +14,7 @@ export default function Login() {
   const handleLogin = () => {
     setEmail("");
     setPassword("");
-    dispatch(loginUser(email, password));
+    dispatch(loginUser({ email, password }));
     if (
       userData &&
       userData.email === email &&
