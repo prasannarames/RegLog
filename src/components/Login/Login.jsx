@@ -15,16 +15,22 @@ export default function Login() {
     setEmail("");
     setPassword("");
     dispatch(loginUser({ email, password }));
-    if (
-      userData &&
-      userData.email === email &&
-      userData.password === password
-    ) {
-      navigate("/");
-      alert("sucessfully Logged in");
-    } else {
-      alert("Invalid credentials");
-      navigate("/login");
+    try {
+      if (
+        userData &&
+        userData.email === email &&
+        userData.password === password
+      ) {
+        navigate("/");
+        alert("sucessfully Logged in");
+      } else {
+        alert("Invalid credentials");
+        navigate("/login");
+      }
+    } catch (err) {
+      if (err.status == 404) {
+        navigate("/login");
+      }
     }
   };
   return (
