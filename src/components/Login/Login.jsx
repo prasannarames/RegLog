@@ -9,12 +9,11 @@ export default function Login() {
   const dispatch = useDispatch();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [userName, setUserName] = useState("");
   const userData = useSelector((state) => state.user.userData);
 
   const handleLogin = () => {
-    setEmail("");
-    setPassword("");
-    dispatch(loginUser({ email, password }));
+    // dispatch(loginUser({ email, password, userName }));
     try {
       if (
         userData &&
@@ -32,6 +31,9 @@ export default function Login() {
         navigate("/");
       }
     }
+    setEmail("");
+    setPassword("");
+    setUserName("");
   };
   return (
     <div>
